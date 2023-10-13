@@ -1,0 +1,8 @@
+declaras 2 listas no necesariamente de la misma longitud
+imprimir 2 listas, la primer lista tendra los items que coincidadn entre las 2 listas
+y la segunda lista tendra los elementos que no coinciden entre las 2 listas
+solo utilizar 2 lineas de codigo
+
+Una chocolateria lanzara un nuevo producto, el cual viene presentado en barras de n segmentos las barras solo vienen en tamaños que son potencias de 2(1,2,4,8) 
+Realizar un programa para realizar una prueba de calidad de dicho producto, pero para ello tienes que probar k segmentos, El problema es que la barra solo se puede partir a la mitad, dicho programa determinara el numero de veces que vas a quebrar la barra para obtener k segmentos exactamente
+La salida sera el tamaño minimo de barra que se tendra que pedir para tomas n segmentos y el segundo numero es el numero de veces que tienes que partir la barra

@@ -1,0 +1,32 @@
+$I:46:03 AM : DEBUG [Persona.py] : 33 
+        ID Cliente: 1, Nombre: Juan
+        
+$I:46:27 AM : DEBUG [Persona.py] : 33 
+        ID Cliente: 1, Nombre: Juan
+        
+$I:43:26 AM : DEBUG [CursorPoll.py] : 11 Inicio de bloque with
+$I:43:26 AM : DEBUG [Conexion2.py] : 40 Conexion Realizada <connection object at 0x000002F910C2CE10; dsn: 'user=postgres password=xxx dbname=postgres host=127.0.0.1 port=5432', closed: 0>
+$I:43:26 AM : DEBUG [CursorPoll.py] : 17 Se ejecuta exit
+$I:50:52 AM : DEBUG [CursorPoll.py] : 11 Inicio de bloque with
+$I:50:52 AM : DEBUG [Conexion2.py] : 40 Conexion Realizada <connection object at 0x000001F5DC543890; dsn: 'user=postgres password=xxx dbname=postgres host=127.0.0.1 port=5432', closed: 0>
+$I:50:52 AM : DEBUG [CursorPoll.py] : 17 Se ejecuta exit
+$I:50:52 AM : DEBUG [Conexion2.py] : 46 Conexion regresada <connection object at 0x000001F5DC543890; dsn: 'user=postgres password=xxx dbname=postgres host=127.0.0.1 port=5432', closed: 0>
+$I:52:20 AM : DEBUG [CursorPoll.py] : 11 Inicio de bloque with
+$I:52:20 AM : DEBUG [Conexion2.py] : 40 Conexion Realizada <connection object at 0x0000021DDBF37890; dsn: 'user=postgres password=xxx dbname=postgres host=127.0.0.1 port=5432', closed: 0>
+$I:52:20 AM : DEBUG [CursorPoll.py] : 17 Se ejecuta exit
+$I:52:20 AM : DEBUG [Conexion2.py] : 46 Conexion regresada <connection object at 0x0000021DDBF37890; dsn: 'user=postgres password=xxx dbname=postgres host=127.0.0.1 port=5432', closed: 0>
+$I:52:20 AM : DEBUG [PersonaDAO.py] : 51 
+        ID Cliente: 1, Nombre: Fermin
+        
+$I:52:20 AM : DEBUG [PersonaDAO.py] : 51 
+        ID Cliente: 2, Nombre: Juan
+        
+$I:52:20 AM : DEBUG [PersonaDAO.py] : 51 
+        ID Cliente: 3, Nombre: Gerardo
+        
+$I:52:20 AM : DEBUG [PersonaDAO.py] : 51 
+        ID Cliente: 4, Nombre: Victor
+        
+$I:52:20 AM : DEBUG [PersonaDAO.py] : 51 
+        ID Cliente: 5, Nombre: Jorge
+        

@@ -1,0 +1,15 @@
+Tipos de datos:
+Una jugueteria tiene un gran exito en 2 de sus productos, payasos y muñecas
+Se suele hacer la venta por correo, y la empresa de logistica les cobra por peso del paquete
+asi que deben calcular el peso de los payasos y muñecas, cada payaso pesa 112 gramos, y cada muñeca 75 gramos
+Escribir un programa que lea el numero de payasos y muñecas vendidas en el ultimo pedido.
+Calcule el peso total del paquete y calcular el precio total.
+Si por cada 100 gramos del payaso, se cobra 3 pesos, y por cada 100 gramos de muñeca, 2 pesos
+
+
+Archivos
+En base al siguiente csv realizar lo siguiente:
+Crear un metodo que cree un diccionario ordenado por nombre
+Crear una funcion que ordene por numero de control
+Una funcion que ordene por calificacion
+s

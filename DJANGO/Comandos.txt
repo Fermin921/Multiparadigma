@@ -1,0 +1,137 @@
+Pasos para la creacion de django 
+
+1. Crear entorno virtual:
+python -m venv .venv
+
+2. Instalar DJango:
+python -m pip install django
+
+3. Crear un directorio de django:
+django-admin startproject nombredelproyecto
+
+4. Entrar al directorio creado:
+cd nombredelproyecto
+
+5. Crear la aplicacion dentro del directorio:
+python manage.py startapp webapp
+
+6.Correr el servidor:
+python manage.py runserver
+
+Viernes:
+
+Crear la conexion a la base de datos
+
+2. importar las tablas por defecto de jango usando la migracion
+    python manage.py migrate
+
+3. Verificar que se hayan creado las tablas en la base datos o bien en pg admin 
+
+4. Crear un super usuario:
+python manage.py createsuperuser 
+4.1 Pedira un username 
+4.2 un email 
+4.3 Contraseña 
+4.4 confimarcion de la contraseña
+
+5. Verificamos que si podamos iniciar sesion ejecutando el servidor y en la bara de direcciones agregamos "/admin"
+6. Iniciamos sesion con lo creado
+
+7. Despues creamos una nueva aplicacion:
+python manage.py startapp persona 
+
+8. En la carpeta persona/models.py agregamos los atributos:
+class Domicilio(models.Model):
+    calle = models.CharField(max_length=255)
+    no_calle = models.IntegerField()
+    pais = models.CharField(max_length=255)
+
+9. Despues vamos a persona/admin: 
+from persona.models import Domicilio
+
+# Register your models here.
+admin.site.register(Domicilio)
+
+10. Despues creamos la migracion con el siguiente comando: 
+    python manage.py showmigrations 
+
+11. Realizamos la migracion: 
+    python manage.py migrate
+    
+10. ejecutamos el servidor:
+python manage.py runserver
+
+Lunes:
+
+1.Creamos el metodo str para tabla domicilio
+    def __str__(self) -> str:
+        return f"Domicilio {self.id}, Calle {self.calle}, no. {self.no_calle}, pais {self.pais}"
+
+
+2. Creamos un nueva clase dentro del archivo models
+class Persona(models.Model):
+    nombre = models.CharField(max_length=255)
+    apellido = models.CharField(max_length=255)
+    email = models.CharField(max_length=255)
+    domicilio = models.ForeignKey(Domicilio, on_delete=models.SET_NULL, null=True)
+
+    def __str__(self) -> str:
+        return f"Persona {self.id}, Nombre: {self.nombre}, Apellido: {self.apellido}, Email: {self.email}, Domicilio: {self.domicilio}"
+
+3. Despues creamos la migracion para poder cargarla en la pagina admin de django 
+python manage.py makemigration 
+
+4. Despues ya solo migramos:
+python manage.py migrate 
+
+5. Para poder visualizarlo, tenenmos que ir al archivo settings y agregar en "INSTALLED APPS" el modelo "persona"
+
+6. Ahora creamos una manera de consultar los datos de los modelos creados en el documento Bienvenido.html creado al inicio del curso
+Agregando un href que llamaremos ListadoPersonas 
+    <a href="ListadoPersonas">Listado de las personas</a>
+
+7. Ahora, dentro de la carpeta personas, creamos una nueva carpeta llamada "Templates" y creamos un nuevo documento html llamado indexpersona 
+
+8. Dentro de este archivo creamos una tabla donde se guardara o mostrara los datos consultados:
+
+<h1>Lista de personas</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <td>ID</td>
+                <td>Nombre</td>
+                <td>Email</td>
+            </tr>
+            <tbody>
+                <!--El bloque de abajo es para agregar codigo de python, algo parecido como con php -->
+                {% for persona in personas %} 
+                    <tr>
+                        <td>{{persona.id}}</td>
+                        <td>{{persona.nombre}} {{persona.apellido}}</td>
+                        <td>{{persona.emai}}</td>
+                    </tr>
+                {%endfor%}
+            </tbody>
+        </thead>
+    </table>
+
+9. Ya creado los documentos, tenemos que referenciarlos para poder visualizarlos, ahora vamos al archivo 'urls.py' y agregamos el archivo 
+creado: 
+from webapp.views import index, indexPersona
+
+urlpatterns = [
+    path("admin/", admin.site.urls),
+    path("", index),
+    path("ListadoPersonas", indexPersona),
+]
+
+10. Antes de ejecutar el servidor, para el renderizado de la pagina agreamos lo siguiente: 
+from persona.models import Persona
+def indexPersona(request):
+    personas = Persona.objects.order_by("id")
+
+    return render(request, "IndexPersona.html", {"personas": personas})
+
+Martes:
+
