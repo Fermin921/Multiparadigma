@@ -134,4 +134,293 @@ def indexPersona(request):
     return render(request, "IndexPersona.html", {"personas": personas})
 
 Martes:
+1. Se crea el archivo forms domde agregamos el siguiente formulario que se creara automatico:
+from django.forms import ModelForm, EmailInput
+from persona.models import Persona
 
+
+class PersonaForm(ModelForm):
+    class Meta:
+        model = Persona
+        fields = "__all__"
+        widgets = {
+            "email": EmailInput(
+                attrs={
+                    "type": "email",
+                    "class": "form-control",
+                    "style": "max-width:100 px",
+                    "placeholder": "Correo",
+                }
+            )
+        }
+
+2. Para poder visualizarlo lo agregamos a la carpeta view del proyecto:
+from django.shortcuts import render, redirect, get_object_or_404
+from persona.models import Persona
+from persona.forms import PersonaForm
+
+
+# Vistas
+# Agregar una nueva persona
+def nuevaPersona(request):
+    if request.method == "POST":
+        formapersona = PersonaForm(request.POST)
+        if formapersona.is_valid():
+            formapersona.save()
+            return redirect("ListadoPersonas")
+    else:
+        formapersona = PersonaForm()
+    return render(request, "Agregar.html", {"formapersona": formapersona})
+
+3. Ya creado y referenciado, ahora vamos al archivo de urls para agregar la direccion:
+
+urlpatterns = [
+    path("admin/", admin.site.urls),
+    path("", index),
+    path("ListadoPersonas", indexPersona, name="ListadoPersonas"),
+    path("nuevapersona", nuevaPersona),
+]
+
+4. Ademas en el archivo principal colocaremos un href para usar la funcionalidad de cambiar de pagina:
+    <a href="nuevapersona">Agregar</a>
+
+5. Ya tenemos para agregar y consultar personas en nuestro proyecto, ahora crearemos 2 archivos mas llamados eliminar y editar
+que serian parecidos al de agregar 
+EditarPersona.html:
+{%extends "layout.html"%}
+{%block body%}
+<div>
+    <form method="post">
+        <h1>Editar Persona</h1>
+    <table>
+        <div>
+            {{formapersona}}
+        </div>
+    </table>
+    <div >
+        <input type="submit" value="submit">
+    </div>
+    {% csrf_token %}
+    </form>
+</div>
+{%endblock%}
+
+El delete no lleva forma solo se usara un metodo:
+
+7. Ahora, en index persona, agregar unas celdas vacias para agregar los diferentes  botones de accion para el crud:
+
+    {%extends "layout.html"%}
+    {%block body%}
+<div>
+    <h1>Lista de personas</h1>
+    <a href="nuevapersona">Agregar</a>
+    <table border="1">
+        <thead>
+            <tr>
+                <td>ID</td>
+                <td>Nombre</td>
+                <td>Email</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tbody>
+                <!--El bloque de abajo es para agregar codigo de python, algo parecido como con php -->
+                {% for persona in personas %} 
+                    <tr>
+                        <td>{{persona.id}}</td>
+                        <td>{{persona.nombre}} {{persona.apellido}}</td>
+                        <td>{{persona.email}}</td>
+                        <td><a href="editarPersona/{{persona.id}}">Editar</a></td>
+                        <td><a href="detallePersona/{{persona.id}}">Detalle</a></td>
+                        <td><a href="EliminarPersona/{{persona.id}}">Eliminar</a></td>
+                    </tr>
+                {%endfor%}
+            </tbody>
+        </thead>
+    </table>
+</div>
+{%endblock%}
+
+Quedaria de la forma anterior el index persona:
+
+8. para la funcionalidad de los botones, nos vamos al archivo views para agregar las funciones correspondientes de cada accion:
+
+La manera final del view.py quedaria de la siguiente manera:
+from django.shortcuts import render, redirect, get_object_or_404
+from persona.models import Persona
+from persona.forms import PersonaForm
+
+
+# Vistas
+# Agregar una nueva persona
+def nuevaPersona(request):
+    if request.method == "POST":
+        formapersona = PersonaForm(request.POST)
+        if formapersona.is_valid():
+            formapersona.save()
+            return redirect("ListadoPersonas")
+    else:
+        formapersona = PersonaForm()
+    return render(request, "Agregar.html", {"formapersona": formapersona})
+
+
+# Metodo para editar persona
+def editarPersona(request, id):
+    persona = get_object_or_404(Persona, pk=id)
+    if request.method == "POST":
+        formaPersona = PersonaForm(request.POST, instance=persona)
+        if formaPersona.is_valid():
+            formaPersona.save()
+            return redirect("ListadoPersonas")
+    else:
+        formaPersona = PersonaForm(instance=persona)
+    return render(request, "editarPersona.html", {"formapersona": formaPersona})
+
+
+# EliminarPersona
+def EliminarPersona(request, id):
+    persona = get_object_or_404(Persona, pk=id)
+    if persona:
+        persona.delete()
+    return redirect("ListadoPersonas")
+
+
+# ConsultarPersonas
+def DetallePersona(request, id):
+    persona = get_object_or_404(Persona, pk=id)
+    return render(request, "detallePersona.html", {"persona": persona})
+
+9. Ya creados los metodos, tenemos que dirigirnos al archivo urls.py para hacer las referencias para mandarlos llamar:
+El urls final quedaria de la siguiente manera :
+from django.contrib import admin
+from django.urls import path
+from webapp.views import index, indexPersona
+from persona.views import *
+
+urlpatterns = [
+    path("admin/", admin.site.urls),
+    path("", index),
+    path("ListadoPersonas", indexPersona, name="ListadoPersonas"),
+    path("nuevapersona", nuevaPersona),
+    path("detallePersona/<int:id>", DetallePersona),
+    path("editarPersona/<int:id>", editarPersona),
+    path("EliminarPersona/<int:id>", EliminarPersona),
+]
+
+
+Crearemos un nuevo html que sera donde se guardaran los estilos automaticos de las diferentes pantallas quedaria de la siguiente manera:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Layout</title>
+</head>
+<body>
+    {%load static %}
+    <img src="{% static 'Portada.png'%}" height="50px" width="50px">
+    {%block body %}
+
+    {%endblock%}
+</body>
+</html>
+
+Esto dependiendo de cada quien se agregara los estilos o imagenes que siempre van a aparecer 
+
+En caso de querer utilizar las imagenes o algun otro recurso fijo, se crea una carpeta llamada "static" que ahi se guardaran estos archivos,
+por ejemplo ahi cargamos una imagen que sera mostrada en cada una de las paginas, pero para eso tenemos que modificar los diferentes html
+agregando 2 etiquetas, al final quedarian de la siguiente manera los htmls:
+
+1. Agregar.html: 
+{%extends "layout.html"%}
+{%block body%}
+<div>
+    <form method="post">
+        <h1>Agregar Persona</h1>
+    <table>
+        <div>
+            {{formapersona}}
+        </div>
+    </table>
+    <div >
+        <input type="submit" value="submit">
+    </div>
+    {% csrf_token %}
+    </form>
+</div>
+{%endblock%}
+
+2.detallePersona.html:
+{%extends "layout.html"%}
+{%block body%}
+<div>
+    <h1>
+        {{persona.id}}
+        {{persona.nombre}}
+        {{persona.apellido}}
+        {{persona.email}}
+    </h1>
+    
+    <a href="{% url 'ListadoPersonas' %}"> Regresar </a>
+</div>
+{%endblock%}
+
+
+3. indexPersona.html:
+
+    {%extends "layout.html"%}
+    {%block body%}
+<div>
+    <h1>Lista de personas</h1>
+    <a href="nuevapersona">Agregar</a>
+    <table border="1">
+        <thead>
+            <tr>
+                <td>ID</td>
+                <td>Nombre</td>
+                <td>Email</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tbody>
+                <!--El bloque de abajo es para agregar codigo de python, algo parecido como con php -->
+                {% for persona in personas %} 
+                    <tr>
+                        <td>{{persona.id}}</td>
+                        <td>{{persona.nombre}} {{persona.apellido}}</td>
+                        <td>{{persona.email}}</td>
+                        <td><a href="editarPersona/{{persona.id}}">Editar</a></td>
+                        <td><a href="detallePersona/{{persona.id}}">Detalle</a></td>
+                        <td><a href="EliminarPersona/{{persona.id}}">Eliminar</a></td>
+                    </tr>
+                {%endfor%}
+            </tbody>
+        </thead>
+    </table>
+</div>
+{%endblock%}
+
+4. editarPersona.html:
+{%extends "layout.html"%}
+{%block body%}
+<div>
+    <form method="post">
+        <h1>Editar Persona</h1>
+    <table>
+        <div>
+            {{formapersona}}
+        </div>
+    </table>
+    <div >
+        <input type="submit" value="submit">
+    </div>
+    {% csrf_token %}
+    </form>
+</div>
+{%endblock%}
+
+Con esto quedaria finalizado el proyecto, ya solo quedaria hacer las modificaciones dependiendo de las necesidades de cada persona
+o lo que requiera el proyecto en general, para los estilos es en "layout.html"

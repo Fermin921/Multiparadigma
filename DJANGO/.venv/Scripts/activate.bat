@@ -8,7 +8,7 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-set VIRTUAL_ENV=C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\DJANGO\.venv
+set VIRTUAL_ENV=C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\DJANGO\.venv
 
 if not defined PROMPT set PROMPT=$P$G
 
