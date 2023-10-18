@@ -1,0 +1,49 @@
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [16/Oct/2023 09:44:51] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Oct/2023 09:46:36] "[32mGET / HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [16/Oct/2023 09:46:36] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Oct/2023 09:46:48] "[31m[1mPOST / HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [16/Oct/2023 09:47:41] "[31m[1mPOST / HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [16/Oct/2023 09:47:41] "[31m[1mPOST / HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [16/Oct/2023 09:47:42] "[31m[1mPOST / HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [16/Oct/2023 09:47:42] "[31m[1mPOST / HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [16/Oct/2023 09:47:42] "[31m[1mPOST / HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [16/Oct/2023 09:47:42] "[31m[1mPOST / HTTP/1.1[0m" 405 -
+ERROR:app:Exception on /login [POST]
+Traceback (most recent call last):
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\FLASK\.venv\Lib\site-packages\flask\app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\FLASK\.venv\Lib\site-packages\flask\app.py", line 870, in full_dispatch_request
+    return self.finalize_request(rv)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\FLASK\.venv\Lib\site-packages\flask\app.py", line 889, in finalize_request
+    response = self.make_response(rv)
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\FLASK\.venv\Lib\site-packages\flask\app.py", line 1161, in make_response
+    raise TypeError(
+TypeError: The view function for 'login' did not return a valid response. The function either returned None or ended without a return statement.
+INFO:werkzeug:127.0.0.1 - - [16/Oct/2023 09:47:53] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+ERROR:app:Exception on /login [POST]
+Traceback (most recent call last):
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\FLASK\.venv\Lib\site-packages\flask\app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\FLASK\.venv\Lib\site-packages\flask\app.py", line 870, in full_dispatch_request
+    return self.finalize_request(rv)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\FLASK\.venv\Lib\site-packages\flask\app.py", line 889, in finalize_request
+    response = self.make_response(rv)
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\FLASK\.venv\Lib\site-packages\flask\app.py", line 1161, in make_response
+    raise TypeError(
+TypeError: The view function for 'login' did not return a valid response. The function either returned None or ended without a return statement.
+INFO:werkzeug:127.0.0.1 - - [16/Oct/2023 09:49:14] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [16/Oct/2023 09:49:25] "GET /login HTTP/1.1" 200 -
+DEBUG:app:Token: None
+INFO:werkzeug:127.0.0.1 - - [16/Oct/2023 09:49:48] "POST /juego HTTP/1.1" 200 -

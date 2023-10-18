@@ -7,10 +7,22 @@
     <title>Layout</title>
 </head>
 <body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Acerca de</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
     {%load static %}
     <img src="{% static 'Portada.png'%}" height="50px" width="50px">
     {%block body %}
 
     {%endblock%}
+    <footer>
+        <p>&copy; 2023 Tu Empresa</p>
+    </footer>
 </body>
 </html>

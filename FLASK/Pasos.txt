@@ -1,0 +1,42 @@
+Lunes:
+1. Crear un entorno virtual
+2. Ejecutar pip install flask 
+3. Creamos un nuevo archivo python 
+
+4. Dentro del archivo creado, importamos las siguientes liberias:
+from flask import Flask
+from werkzeug.exceptions import abort
+from werkzeug.utils import redirect
+import logging
+
+5. Creamos la aplicacion 
+app = Flask(__name__)
+6. Se agregan las rutas de la siguiente manera 
+@app.route("/")
+def index():
+    return redirect(url_for("login"))
+7. Se agrega la ruta del login en este caso:
+
+@app.route("/login")
+def login():
+    return render_template("login.html")
+
+8. Ejecutamos la aplicacion con el siguiente comando: 
+    flask run
+
+9.Agregamos 2 carpetas "templates" y "static"
+10. Dentro de la carpeta templates, creamos un archivo html llamado login 
+
+10.Se establece de la siguiente manera para poder permitir los 2 metodos get y post y se valida 
+
+@app.route("/login", method=["GET", "POST"])
+def login():
+    if request.method == "POST":
+        redirect("/")
+    else:
+        redirect("/")
+    return render_template("login.html")
+
+
+11. Con lo siugiente creamos el log:
+logging.basicConfig(filename="error.log", level=logging.DEBUG)
