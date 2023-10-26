@@ -1,3 +1,0 @@
-Escribir un programa que le pida al usuario un numero entero n, n debe ser mayor o igual a 4, y menor que 100
-Generar una lista de longitud n, de numeros aleatorios y crear una funcion donde se genere una matriz donde los elementos de la x sean los numeros de la lista 
-Llenar los demas espacios con 0
