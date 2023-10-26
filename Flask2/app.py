@@ -4,9 +4,13 @@ from config import BasicConfig
 from flask_migrate import Migrate
 import logging
 from Routes.persona.personas import appersona
+from Routes.producto.producto import approducto
+from Routes.imagen.imagen import appimagen
 
 app = Flask(__name__)
 app.register_blueprint(appersona)
+app.register_blueprint(approducto)
+app.register_blueprint(appimagen)
 app.config.from_object(BasicConfig)
 db.init_app(app)
 migrate = Migrate()

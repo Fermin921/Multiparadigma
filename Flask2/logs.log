@@ -10,3 +10,69 @@ INFO:werkzeug:127.0.0.1 - - [18/Oct/2023 10:04:53] "GET / HTTP/1.1" 200 -
 INFO:werkzeug:127.0.0.1 - - [18/Oct/2023 10:04:55] "GET /agregar HTTP/1.1" 200 -
 INFO:werkzeug:127.0.0.1 - - [18/Oct/2023 10:05:06] "[32mPOST /agregar HTTP/1.1[0m" 302 -
 INFO:werkzeug:127.0.0.1 - - [18/Oct/2023 10:05:06] "GET /index HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2023 21:08:13] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2023 21:08:13] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2023 21:08:22] "GET /agregar HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2023 21:08:33] "[32mPOST /agregar HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2023 21:08:33] "GET /index HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2023 21:08:35] "GET /editar/2 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2023 21:08:40] "[32mPOST /editar/2 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2023 21:08:40] "GET /index HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2023 21:08:43] "[32mGET /eliminar/2 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2023 21:08:43] "GET /index HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2023 21:09:38] "[33mGET /indeximagen HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2023 21:09:55] "[33mGET /leerimagen HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2023 21:10:16] "[33mGET /imagenes HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2023 21:10:21] "[33mGET /imagenes.html HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2023 21:12:29] "GET /index HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2023 21:12:44] "[33mGET /imagenes HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2023 21:12:49] "[33mGET /imagenes.html HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2023 21:13:36] "[33mGET /imagenes.html HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2023 21:13:37] "[33mGET /imagenes.html HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2023 21:13:37] "[33mGET /imagenes.html HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2023 21:13:37] "[33mGET /imagenes.html HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2023 21:13:37] "[33mGET /imagenes.html HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2023 21:13:37] "[33mGET /imagenes.html HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2023 21:13:38] "[33mGET /imagenes.html HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2023 21:13:38] "[33mGET /imagenes.html HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2023 21:13:38] "[33mGET /imagenes.html HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2023 21:13:38] "[33mGET /imagenes.html HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2023 21:13:39] "[33mGET /imagenes.html HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2023 21:13:39] "[33mGET /imagenes.html HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2023 21:13:40] "[33mGET /imagenes HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2023 21:13:42] "GET /index HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2023 21:13:47] "[33mGET /indeximagen HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2023 21:14:06] "[33mGET /indexImagen HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2023 21:14:40] "[33mGET /leerimagen HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2023 21:16:13] "[33mGET /leerimagen HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2023 21:16:23] "[33mGET /indexImagen HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2023 21:21:17] "GET /indexImagen HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2023 21:21:40] "POST /indexImagen HTTP/1.1" 200 -
+ERROR:app:Exception on /leerImagen [GET]
+Traceback (most recent call last):
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\Flask2\.venv\Lib\site-packages\flask\app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\Flask2\.venv\Lib\site-packages\flask\app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\Flask2\.venv\Lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\Flask2\.venv\Lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\Flask2\Routes\imagen\imagen.py", line 22, in leerImagen
+    imagen = Images.query.filter_by(id=2).first().renderData
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'renderData'
+INFO:werkzeug:127.0.0.1 - - [25/Oct/2023 21:21:48] "[35m[1mGET /leerImagen HTTP/1.1[0m" 500 -
