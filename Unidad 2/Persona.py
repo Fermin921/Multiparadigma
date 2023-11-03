@@ -1,6 +1,7 @@
 from logger_base import log
 
 
+# Clase o bien formato de la tabla de la base de datos
 class Cliente:
     def __init__(self, id=None, nombre=None) -> None:
         self.id = id

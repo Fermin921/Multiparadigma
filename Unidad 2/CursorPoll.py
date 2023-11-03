@@ -24,6 +24,7 @@ class CursorDelPool:
         Conexion.LiberarConexion(self._conexion)
 
 
+# Siguiente codigo sirve para seleccionar todos los datos de la tabla
 if __name__ == "__main__":
     with CursorDelPool() as Cursor:
         log.debug("Bloque with")

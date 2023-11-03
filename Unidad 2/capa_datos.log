@@ -19,3 +19,39 @@ $I:21:25 AM : ERROR [Conexion2.py] : 34 could not match 2 port numbers to 1 host
 
 $I:22:51 AM : ERROR [Conexion2.py] : 34 
 $I:25:57 AM : DEBUG [Conexion2.py] : 40 Conexion Realizada <connection object at 0x000001E797B34D00; dsn: 'user=postgres password=xxx dbname=postgres host=127.0.0.1 port=5432', closed: 0>
+$I:19:53 AM : DEBUG [Conexion2.py] : 40 Conexion Realizada <connection object at 0x0000012F7F868F20; dsn: 'user=postgres password=xxx dbname=postgres host=127.0.0.1 port=5432', closed: 0>
+$I:23:07 AM : DEBUG [CursorPoll.py] : 11 Inicio de bloque with
+$I:23:07 AM : DEBUG [Conexion2.py] : 40 Conexion Realizada <connection object at 0x000002019BF9D030; dsn: 'user=postgres password=xxx dbname=postgres host=127.0.0.1 port=5432', closed: 0>
+$I:23:07 AM : DEBUG [CursorPoll.py] : 17 Se ejecuta exit
+$I:23:07 AM : DEBUG [Conexion2.py] : 46 Conexion regresada <connection object at 0x000002019BF9D030; dsn: 'user=postgres password=xxx dbname=postgres host=127.0.0.1 port=5432', closed: 0>
+$I:25:33 AM : ERROR [commits.py] : 21 no existe la relación «cliente»
+LINE 1: INSERT INTO cliente(nombre,id) VALUES ('Jorge',5)
+                    ^
+
+$I:26:02 AM : DEBUG [CursorPoll.py] : 11 Inicio de bloque with
+$I:26:02 AM : DEBUG [Conexion2.py] : 40 Conexion Realizada <connection object at 0x000001C8B32ED030; dsn: 'user=postgres password=xxx dbname=postgres host=127.0.0.1 port=5432', closed: 0>
+$I:26:02 AM : DEBUG [CursorPoll.py] : 29 Bloque with
+$I:26:02 AM : DEBUG [CursorPoll.py] : 17 Se ejecuta exit
+$I:26:02 AM : DEBUG [Conexion2.py] : 46 Conexion regresada <connection object at 0x000001C8B32ED030; dsn: 'user=postgres password=xxx dbname=postgres host=127.0.0.1 port=5432', closed: 0>
+$I:29:27 AM : DEBUG [CursorPoll.py] : 11 Inicio de bloque with
+$I:29:27 AM : DEBUG [Conexion2.py] : 40 Conexion Realizada <connection object at 0x0000024CBDA4D030; dsn: 'user=postgres password=xxx dbname=postgres host=127.0.0.1 port=5432', closed: 0>
+$I:29:27 AM : DEBUG [CursorPoll.py] : 29 Bloque with
+$I:29:27 AM : DEBUG [CursorPoll.py] : 31 []
+$I:29:27 AM : DEBUG [CursorPoll.py] : 17 Se ejecuta exit
+$I:29:27 AM : DEBUG [Conexion2.py] : 46 Conexion regresada <connection object at 0x0000024CBDA4D030; dsn: 'user=postgres password=xxx dbname=postgres host=127.0.0.1 port=5432', closed: 0>
+$I:30:17 AM : ERROR [commits.py] : 21 not all arguments converted during string formatting
+$I:31:29 AM : ERROR [commits.py] : 21 not all arguments converted during string formatting
+$I:32:07 AM : ERROR [commits.py] : 21 llave duplicada viola restricción de unicidad «cliente_pkey»
+DETAIL:  Ya existe la llave (id)=(5).
+
+$I:32:42 AM : ERROR [commits.py] : 21 not all arguments converted during string formatting
+$I:32:56 AM : ERROR [commits.py] : 21 not all arguments converted during string formatting
+$I:33:07 AM : ERROR [commits.py] : 21 not all arguments converted during string formatting
+$I:39:18 AM : DEBUG [commits.py] : 19 ('Fermin',) insertado correctamente
+$I:40:17 AM : DEBUG [CursorPoll.py] : 11 Inicio de bloque with
+$I:40:17 AM : DEBUG [Conexion2.py] : 40 Conexion Realizada <connection object at 0x00000228CF8BD030; dsn: 'user=postgres password=xxx dbname=postgres host=127.0.0.1 port=5432', closed: 0>
+$I:40:17 AM : DEBUG [CursorPoll.py] : 29 Bloque with
+$I:40:17 AM : DEBUG [CursorPoll.py] : 31 [(5, 'Jorge'), (1, 'Jorge'), (2, 'Fermin')]
+$I:40:17 AM : DEBUG [CursorPoll.py] : 17 Se ejecuta exit
+$I:40:17 AM : DEBUG [Conexion2.py] : 46 Conexion regresada <connection object at 0x00000228CF8BD030; dsn: 'user=postgres password=xxx dbname=postgres host=127.0.0.1 port=5432', closed: 0>
+$I:43:36 AM : DEBUG [Delete.py] : 20 Registro: (1,) eliminado correctamente

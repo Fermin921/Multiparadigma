@@ -53,6 +53,9 @@ En dentro de la carpeta que creamos, buscamos el archivo config.py
 3. Verificar que se hayan creado las tablas en la base datos o bien en pg admin 
 
 //Aqui nos quedamos
+
+3.1 Dentro de la carpeta del proyecto
+
 4. Crear un super usuario:
 python manage.py createsuperuser 
 4.1 Pedira un username 
@@ -60,8 +63,9 @@ python manage.py createsuperuser
 4.3 Contraseña 
 4.4 confimarcion de la contraseña
 
-5. Verificamos que si podamos iniciar sesion ejecutando el servidor y en la bara de direcciones agregamos "/admin"
-6. Iniciamos sesion con lo creado
+5. Ejecutar el servidor con python manage.py runserver
+5.1 Verificamos que si podamos iniciar sesion ejecutando el servidor y en la bara de direcciones agregamos "/admin"
+5.2 Iniciamos sesion con lo creado
 
 7. Despues creamos una nueva aplicacion:
 python manage.py startapp persona 
@@ -72,26 +76,38 @@ class Domicilio(models.Model):
     no_calle = models.IntegerField()
     pais = models.CharField(max_length=255)
 
+8.1 Recordar que hay que crear la tabla que va ser referenciada primero 
+
 9. Despues vamos a persona/admin: 
 from persona.models import Domicilio
 
-# Register your models here.
-admin.site.register(Domicilio)
+	# Register your models here.
+	admin.site.register(Domicilio)
 
 10. Despues creamos la migracion con el siguiente comando: 
-    python manage.py showmigrations 
+    python manage.py showmigrations
+
+10.1 En caso de que no reconozca los modelos
+
+Vamos al archivo settings.py y en el apartado "INSTALLED_APPS" 
+Agregamos el nombre de los modelos
+
+10.2 Pero si se reconocen los modelos, ahora creamos una solicitud de migracion:
+con.
+python manage.py makemigrations
 
 11. Realizamos la migracion: 
     python manage.py migrate
     
-10. ejecutamos el servidor:
+12. ejecutamos el servidor:
 python manage.py runserver
 
+//Borrar
 Lunes:
-
+//
 1.Creamos el metodo str para tabla domicilio
-    def __str__(self) -> str:
-        return f"Domicilio {self.id}, Calle {self.calle}, no. {self.no_calle}, pais {self.pais}"
+{self.pai    def __str__(self) -> str:
+        return f"Domicilio {self.id}, Calle {self.calle}, no. {self.no_calle}, pais s}"
 
 
 2. Creamos un nueva clase dentro del archivo models
@@ -111,14 +127,17 @@ python manage.py makemigration
 python manage.py migrate 
 
 5. Para poder visualizarlo, tenenmos que ir al archivo settings y agregar en "INSTALLED APPS" el modelo "persona"
+//
+13. Dentro del webapp o aplicacion creamos una nueva carpeta "templates", donde iran guardas los documentos html
 
-6. Ahora creamos una manera de consultar los datos de los modelos creados en el documento Bienvenido.html creado al inicio del curso
-Agregando un href que llamaremos ListadoPersonas 
+14. En este caso creamos un archivo que servira como el principal, para poder redireccionar a las diferentes vistas
+
+ Agregando un href que llamaremos ListadoPersonas 
     <a href="ListadoPersonas">Listado de las personas</a>
 
-7. Ahora, dentro de la carpeta personas, creamos una nueva carpeta llamada "Templates" y creamos un nuevo documento html llamado indexpersona 
+15. Ahora, dentro de la carpeta personas, creamos una nueva carpeta llamada "Templates" y creamos un nuevo documento html llamado indexpersona 
 
-8. Dentro de este archivo creamos una tabla donde se guardara o mostrara los datos consultados:
+16. Dentro de este archivo creamos una tabla donde se guardara o mostrara los datos consultados:
 
 <h1>Lista de personas</h1>
 
@@ -142,7 +161,7 @@ Agregando un href que llamaremos ListadoPersonas
         </thead>
     </table>
 
-9. Ya creado los documentos, tenemos que referenciarlos para poder visualizarlos, ahora vamos al archivo 'urls.py' y agregamos el archivo 
+17. Ya creado los documentos, tenemos que referenciarlos para poder visualizarlos, ahora vamos al archivo 'urls.py' y agregamos el archivo 
 creado: 
 from webapp.views import index, indexPersona
 
@@ -152,7 +171,7 @@ urlpatterns = [
     path("ListadoPersonas", indexPersona),
 ]
 
-10. Antes de ejecutar el servidor, para el renderizado de la pagina agreamos lo siguiente: 
+18. Antes de ejecutar el servidor, para el renderizado de la pagina agreamos lo siguiente: 
 from persona.models import Persona
 def indexPersona(request):
     personas = Persona.objects.order_by("id")
@@ -160,7 +179,9 @@ def indexPersona(request):
     return render(request, "IndexPersona.html", {"personas": personas})
 
 Martes:
-1. Se crea el archivo forms domde agregamos el siguiente formulario que se creara automatico:
+En caso de que se nos solicite un email, implementamos lo siguiente:
+
+1. En la carpeta persona Se crea el archivo forms domde agregamos el siguiente formulario que se creara automatico:
 from django.forms import ModelForm, EmailInput
 from persona.models import Persona
 
@@ -187,6 +208,12 @@ from persona.forms import PersonaForm
 
 
 # Vistas
+En el archivo views de la app Personas
+
+
+Antes hay que crear un archivo html llamado Agregar
+Que es donde cargara el archivo generado
+
 # Agregar una nueva persona
 def nuevaPersona(request):
     if request.method == "POST":
