@@ -7,10 +7,10 @@ log.basicConfig(
     handlers=[log.FileHandler("capa_datos.log"), log.StreamHandler()],
 )
 
-if __name__ == "__main__":
-    log.debug("Pruba")
-    log.error("Error")
-    log.critical("Critico")
-    log.warning("Warning")
+# if __name__ == "__main__":
+#     log.debug("Pruba")
+#     log.error("Error")
+#     log.critical("Critico")
+#     log.warning("Warning")
 
 # python manage.py startapp webapp

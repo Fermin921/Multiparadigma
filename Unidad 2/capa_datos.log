@@ -1,57 +1,117 @@
-$I:40:48 AM : ERROR [update.py] : 27 la sintaxis de entrada no es vï¿½lida para tipo integer: ï¿½Ferminï¿½
-LINE 1: Update CLIENTE SET Nombre='1' WHERE ID = 'Fermin'
-                                                ^
-
-$I:41:46 AM : DEBUG [update.py] : 25 Registros Insertados: {registrosInsertados}
-$I:51:01 AM : ERROR [Conexion2.py] : 33 could not match 2 port numbers to 1 hosts
-
-$I:11:04 AM : ERROR [Conexion2.py] : 33 could not match 2 port numbers to 1 hosts
-
-$I:13:39 AM : ERROR [Conexion2.py] : 34 could not match 2 port numbers to 1 hosts
-
-$I:14:06 AM : ERROR [Conexion2.py] : 34 could not match 2 port numbers to 1 hosts
-
-$I:14:50 AM : ERROR [Conexion2.py] : 34 could not match 2 port numbers to 1 hosts
-
-$I:15:09 AM : ERROR [Conexion2.py] : 34 could not match 2 port numbers to 1 hosts
-
-$I:21:25 AM : ERROR [Conexion2.py] : 34 could not match 2 port numbers to 1 hosts
-
-$I:22:51 AM : ERROR [Conexion2.py] : 34 
-$I:25:57 AM : DEBUG [Conexion2.py] : 40 Conexion Realizada <connection object at 0x000001E797B34D00; dsn: 'user=postgres password=xxx dbname=postgres host=127.0.0.1 port=5432', closed: 0>
-$I:19:53 AM : DEBUG [Conexion2.py] : 40 Conexion Realizada <connection object at 0x0000012F7F868F20; dsn: 'user=postgres password=xxx dbname=postgres host=127.0.0.1 port=5432', closed: 0>
-$I:23:07 AM : DEBUG [CursorPoll.py] : 11 Inicio de bloque with
-$I:23:07 AM : DEBUG [Conexion2.py] : 40 Conexion Realizada <connection object at 0x000002019BF9D030; dsn: 'user=postgres password=xxx dbname=postgres host=127.0.0.1 port=5432', closed: 0>
-$I:23:07 AM : DEBUG [CursorPoll.py] : 17 Se ejecuta exit
-$I:23:07 AM : DEBUG [Conexion2.py] : 46 Conexion regresada <connection object at 0x000002019BF9D030; dsn: 'user=postgres password=xxx dbname=postgres host=127.0.0.1 port=5432', closed: 0>
-$I:25:33 AM : ERROR [commits.py] : 21 no existe la relación «cliente»
-LINE 1: INSERT INTO cliente(nombre,id) VALUES ('Jorge',5)
-                    ^
-
-$I:26:02 AM : DEBUG [CursorPoll.py] : 11 Inicio de bloque with
-$I:26:02 AM : DEBUG [Conexion2.py] : 40 Conexion Realizada <connection object at 0x000001C8B32ED030; dsn: 'user=postgres password=xxx dbname=postgres host=127.0.0.1 port=5432', closed: 0>
-$I:26:02 AM : DEBUG [CursorPoll.py] : 29 Bloque with
-$I:26:02 AM : DEBUG [CursorPoll.py] : 17 Se ejecuta exit
-$I:26:02 AM : DEBUG [Conexion2.py] : 46 Conexion regresada <connection object at 0x000001C8B32ED030; dsn: 'user=postgres password=xxx dbname=postgres host=127.0.0.1 port=5432', closed: 0>
-$I:29:27 AM : DEBUG [CursorPoll.py] : 11 Inicio de bloque with
-$I:29:27 AM : DEBUG [Conexion2.py] : 40 Conexion Realizada <connection object at 0x0000024CBDA4D030; dsn: 'user=postgres password=xxx dbname=postgres host=127.0.0.1 port=5432', closed: 0>
-$I:29:27 AM : DEBUG [CursorPoll.py] : 29 Bloque with
-$I:29:27 AM : DEBUG [CursorPoll.py] : 31 []
-$I:29:27 AM : DEBUG [CursorPoll.py] : 17 Se ejecuta exit
-$I:29:27 AM : DEBUG [Conexion2.py] : 46 Conexion regresada <connection object at 0x0000024CBDA4D030; dsn: 'user=postgres password=xxx dbname=postgres host=127.0.0.1 port=5432', closed: 0>
-$I:30:17 AM : ERROR [commits.py] : 21 not all arguments converted during string formatting
-$I:31:29 AM : ERROR [commits.py] : 21 not all arguments converted during string formatting
-$I:32:07 AM : ERROR [commits.py] : 21 llave duplicada viola restricción de unicidad «cliente_pkey»
-DETAIL:  Ya existe la llave (id)=(5).
-
-$I:32:42 AM : ERROR [commits.py] : 21 not all arguments converted during string formatting
-$I:32:56 AM : ERROR [commits.py] : 21 not all arguments converted during string formatting
-$I:33:07 AM : ERROR [commits.py] : 21 not all arguments converted during string formatting
-$I:39:18 AM : DEBUG [commits.py] : 19 ('Fermin',) insertado correctamente
-$I:40:17 AM : DEBUG [CursorPoll.py] : 11 Inicio de bloque with
-$I:40:17 AM : DEBUG [Conexion2.py] : 40 Conexion Realizada <connection object at 0x00000228CF8BD030; dsn: 'user=postgres password=xxx dbname=postgres host=127.0.0.1 port=5432', closed: 0>
-$I:40:17 AM : DEBUG [CursorPoll.py] : 29 Bloque with
-$I:40:17 AM : DEBUG [CursorPoll.py] : 31 [(5, 'Jorge'), (1, 'Jorge'), (2, 'Fermin')]
-$I:40:17 AM : DEBUG [CursorPoll.py] : 17 Se ejecuta exit
-$I:40:17 AM : DEBUG [Conexion2.py] : 46 Conexion regresada <connection object at 0x00000228CF8BD030; dsn: 'user=postgres password=xxx dbname=postgres host=127.0.0.1 port=5432', closed: 0>
-$I:43:36 AM : DEBUG [Delete.py] : 20 Registro: (1,) eliminado correctamente
+$I:57:52 AM : DEBUG [commits.py] : 21 ('Gera',) insertado correctamente
+$I:58:22 AM : ERROR [commits.py] : 24 type object 'Conexion' has no attribute 'cursor'
+$I:04:15 PM : DEBUG [CursorPoll.py] : 11 Inicio de bloque with
+$I:04:15 PM : DEBUG [Conexion2.py] : 40 Conexion Realizada <connection object at 0x00000285149CD030; dsn: 'user=postgres password=xxx dbname=postgres host=127.0.0.1 port=5432', closed: 0>
+$I:04:15 PM : DEBUG [CursorPoll.py] : 17 Se ejecuta exit
+$I:04:15 PM : DEBUG [Conexion2.py] : 46 Conexion regresada <connection object at 0x00000285149CD030; dsn: 'user=postgres password=xxx dbname=postgres host=127.0.0.1 port=5432', closed: 0>
+$I:04:15 PM : DEBUG [PersonaDAO.py] : 51 
+        ID Cliente: 2, Nombre: Fermin
+        
+$I:04:15 PM : DEBUG [PersonaDAO.py] : 51 
+        ID Cliente: 3, Nombre: Gera
+        
+$I:04:15 PM : DEBUG [PersonaDAO.py] : 51 
+        ID Cliente: 5, Nombre: Jorge
+        
+$I:35:48 PM : DEBUG [CursorPoll.py] : 11 Inicio de bloque with
+$I:35:48 PM : DEBUG [Conexion2.py] : 40 Conexion Realizada <connection object at 0x000001BD7753D030; dsn: 'user=postgres password=xxx dbname=postgres host=127.0.0.1 port=5432', closed: 0>
+$I:35:48 PM : DEBUG [CursorPoll.py] : 17 Se ejecuta exit
+$I:35:48 PM : DEBUG [Conexion2.py] : 46 Conexion regresada <connection object at 0x000001BD7753D030; dsn: 'user=postgres password=xxx dbname=postgres host=127.0.0.1 port=5432', closed: 0>
+$I:13:43 PM : DEBUG [CursorPoll.py] : 11 Inicio de bloque with
+$I:13:43 PM : DEBUG [Conexion2.py] : 40 Conexion Realizada <connection object at 0x000001F0BFA8D140; dsn: 'user=postgres password=xxx dbname=postgres host=127.0.0.1 port=5432', closed: 0>
+$I:13:43 PM : DEBUG [CursorPoll.py] : 17 Se ejecuta exit
+$I:13:43 PM : DEBUG [Conexion2.py] : 46 Conexion regresada <connection object at 0x000001F0BFA8D140; dsn: 'user=postgres password=xxx dbname=postgres host=127.0.0.1 port=5432', closed: 0>
+$I:14:01 PM : DEBUG [CursorPoll.py] : 11 Inicio de bloque with
+$I:14:01 PM : DEBUG [Conexion2.py] : 40 Conexion Realizada <connection object at 0x000002B97173D140; dsn: 'user=postgres password=xxx dbname=postgres host=127.0.0.1 port=5432', closed: 0>
+$I:14:01 PM : DEBUG [CursorPoll.py] : 17 Se ejecuta exit
+$I:14:01 PM : DEBUG [Conexion2.py] : 46 Conexion regresada <connection object at 0x000002B97173D140; dsn: 'user=postgres password=xxx dbname=postgres host=127.0.0.1 port=5432', closed: 0>
+$I:14:27 PM : DEBUG [CursorPoll.py] : 11 Inicio de bloque with
+$I:14:27 PM : DEBUG [Conexion2.py] : 40 Conexion Realizada <connection object at 0x000001E10BAED140; dsn: 'user=postgres password=xxx dbname=postgres host=127.0.0.1 port=5432', closed: 0>
+$I:14:27 PM : DEBUG [CursorPoll.py] : 17 Se ejecuta exit
+$I:14:27 PM : DEBUG [Conexion2.py] : 46 Conexion regresada <connection object at 0x000001E10BAED140; dsn: 'user=postgres password=xxx dbname=postgres host=127.0.0.1 port=5432', closed: 0>
+$I:15:00 PM : DEBUG [CursorPoll.py] : 11 Inicio de bloque with
+$I:15:00 PM : DEBUG [Conexion2.py] : 40 Conexion Realizada <connection object at 0x00000219842DD140; dsn: 'user=postgres password=xxx dbname=postgres host=127.0.0.1 port=5432', closed: 0>
+$I:15:00 PM : DEBUG [CursorPoll.py] : 17 Se ejecuta exit
+$I:15:00 PM : DEBUG [Conexion2.py] : 46 Conexion regresada <connection object at 0x00000219842DD140; dsn: 'user=postgres password=xxx dbname=postgres host=127.0.0.1 port=5432', closed: 0>
+$I:15:48 PM : DEBUG [CursorPoll.py] : 11 Inicio de bloque with
+$I:15:48 PM : DEBUG [Conexion2.py] : 40 Conexion Realizada <connection object at 0x000001E437F5D140; dsn: 'user=postgres password=xxx dbname=postgres host=127.0.0.1 port=5432', closed: 0>
+$I:15:48 PM : DEBUG [CursorPoll.py] : 17 Se ejecuta exit
+$I:15:48 PM : DEBUG [Conexion2.py] : 46 Conexion regresada <connection object at 0x000001E437F5D140; dsn: 'user=postgres password=xxx dbname=postgres host=127.0.0.1 port=5432', closed: 0>
+$I:15:48 PM : DEBUG [PersonaDAO.py] : 51 Rodrigo ingresada correctamente, personas insertadas 1
+$I:19:41 PM : DEBUG [CursorPoll.py] : 11 Inicio de bloque with
+$I:19:41 PM : DEBUG [Conexion2.py] : 40 Conexion Realizada <connection object at 0x0000025A0BECD140; dsn: 'user=postgres password=xxx dbname=postgres host=127.0.0.1 port=5432', closed: 0>
+$I:19:41 PM : DEBUG [CursorPoll.py] : 17 Se ejecuta exit
+$I:19:41 PM : DEBUG [Conexion2.py] : 46 Conexion regresada <connection object at 0x0000025A0BECD140; dsn: 'user=postgres password=xxx dbname=postgres host=127.0.0.1 port=5432', closed: 0>
+$I:23:06 PM : DEBUG [CursorPoll.py] : 11 Inicio de bloque with
+$I:23:06 PM : DEBUG [Conexion2.py] : 40 Conexion Realizada <connection object at 0x00000126A315D140; dsn: 'user=postgres password=xxx dbname=postgres host=127.0.0.1 port=5432', closed: 0>
+$I:23:06 PM : DEBUG [CursorPoll.py] : 17 Se ejecuta exit
+$I:23:06 PM : DEBUG [Conexion2.py] : 46 Conexion regresada <connection object at 0x00000126A315D140; dsn: 'user=postgres password=xxx dbname=postgres host=127.0.0.1 port=5432', closed: 0>
+$I:23:56 PM : DEBUG [CursorPoll.py] : 11 Inicio de bloque with
+$I:23:56 PM : DEBUG [Conexion2.py] : 40 Conexion Realizada <connection object at 0x0000019C3EA5D140; dsn: 'user=postgres password=xxx dbname=postgres host=127.0.0.1 port=5432', closed: 0>
+$I:23:56 PM : DEBUG [CursorPoll.py] : 17 Se ejecuta exit
+$I:23:56 PM : DEBUG [Conexion2.py] : 46 Conexion regresada <connection object at 0x0000019C3EA5D140; dsn: 'user=postgres password=xxx dbname=postgres host=127.0.0.1 port=5432', closed: 0>
+$I:25:15 PM : DEBUG [CursorPoll.py] : 11 Inicio de bloque with
+$I:25:15 PM : DEBUG [Conexion2.py] : 40 Conexion Realizada <connection object at 0x00000216744CD140; dsn: 'user=postgres password=xxx dbname=postgres host=127.0.0.1 port=5432', closed: 0>
+$I:25:15 PM : DEBUG [CursorPoll.py] : 17 Se ejecuta exit
+$I:25:15 PM : DEBUG [Conexion2.py] : 46 Conexion regresada <connection object at 0x00000216744CD140; dsn: 'user=postgres password=xxx dbname=postgres host=127.0.0.1 port=5432', closed: 0>
+$I:25:31 PM : DEBUG [CursorPoll.py] : 11 Inicio de bloque with
+$I:25:31 PM : DEBUG [Conexion2.py] : 40 Conexion Realizada <connection object at 0x000001A866D9D140; dsn: 'user=postgres password=xxx dbname=postgres host=127.0.0.1 port=5432', closed: 0>
+$I:25:31 PM : DEBUG [CursorPoll.py] : 17 Se ejecuta exit
+$I:25:31 PM : DEBUG [Conexion2.py] : 46 Conexion regresada <connection object at 0x000001A866D9D140; dsn: 'user=postgres password=xxx dbname=postgres host=127.0.0.1 port=5432', closed: 0>
+$I:25:31 PM : DEBUG [PersonaDAO.py] : 51 Juan ingresada correctamente
+$I:28:49 PM : DEBUG [CursorPoll.py] : 11 Inicio de bloque with
+$I:28:49 PM : DEBUG [Conexion2.py] : 40 Conexion Realizada <connection object at 0x000001A0DFCBD140; dsn: 'user=postgres password=xxx dbname=postgres host=127.0.0.1 port=5432', closed: 0>
+$I:28:49 PM : DEBUG [CursorPoll.py] : 17 Se ejecuta exit
+$I:28:49 PM : DEBUG [Conexion2.py] : 46 Conexion regresada <connection object at 0x000001A0DFCBD140; dsn: 'user=postgres password=xxx dbname=postgres host=127.0.0.1 port=5432', closed: 0>
+$I:29:27 PM : DEBUG [CursorPoll.py] : 11 Inicio de bloque with
+$I:29:27 PM : DEBUG [Conexion2.py] : 40 Conexion Realizada <connection object at 0x000001E05F6BD140; dsn: 'user=postgres password=xxx dbname=postgres host=127.0.0.1 port=5432', closed: 0>
+$I:29:27 PM : DEBUG [CursorPoll.py] : 17 Se ejecuta exit
+$I:29:27 PM : DEBUG [Conexion2.py] : 46 Conexion regresada <connection object at 0x000001E05F6BD140; dsn: 'user=postgres password=xxx dbname=postgres host=127.0.0.1 port=5432', closed: 0>
+$I:31:33 PM : DEBUG [CursorPoll.py] : 11 Inicio de bloque with
+$I:31:33 PM : DEBUG [Conexion2.py] : 40 Conexion Realizada <connection object at 0x0000022D5502D140; dsn: 'user=postgres password=xxx dbname=postgres host=127.0.0.1 port=5432', closed: 0>
+$I:31:33 PM : DEBUG [CursorPoll.py] : 17 Se ejecuta exit
+$I:31:33 PM : DEBUG [Conexion2.py] : 46 Conexion regresada <connection object at 0x0000022D5502D140; dsn: 'user=postgres password=xxx dbname=postgres host=127.0.0.1 port=5432', closed: 0>
+$I:31:33 PM : DEBUG [PersonaDAO.py] : 51 None eliminado correctamente
+$I:35:36 PM : DEBUG [CursorPoll.py] : 11 Inicio de bloque with
+$I:35:36 PM : DEBUG [Conexion2.py] : 40 Conexion Realizada <connection object at 0x000001F25B64D030; dsn: 'user=postgres password=xxx dbname=postgres host=127.0.0.1 port=5432', closed: 0>
+$I:35:36 PM : DEBUG [CursorPoll.py] : 17 Se ejecuta exit
+$I:35:36 PM : DEBUG [Conexion2.py] : 46 Conexion regresada <connection object at 0x000001F25B64D030; dsn: 'user=postgres password=xxx dbname=postgres host=127.0.0.1 port=5432', closed: 0>
+$I:35:36 PM : DEBUG [PersonaDAO.py] : 51  [<Persona.Cliente object at 0x000001F25B796AD0>, <Persona.Cliente object at 0x000001F25B7969D0>, <Persona.Cliente object at 0x000001F25B796910>, <Persona.Cliente object at 0x000001F25B796990>, <Persona.Cliente object at 0x000001F25B796B10>]
+$I:36:24 PM : DEBUG [CursorPoll.py] : 11 Inicio de bloque with
+$I:36:24 PM : DEBUG [Conexion2.py] : 40 Conexion Realizada <connection object at 0x00000198175CD030; dsn: 'user=postgres password=xxx dbname=postgres host=127.0.0.1 port=5432', closed: 0>
+$I:36:24 PM : DEBUG [CursorPoll.py] : 17 Se ejecuta exit
+$I:36:24 PM : DEBUG [Conexion2.py] : 46 Conexion regresada <connection object at 0x00000198175CD030; dsn: 'user=postgres password=xxx dbname=postgres host=127.0.0.1 port=5432', closed: 0>
+$I:36:24 PM : DEBUG [PersonaDAO.py] : 51 
+        ID Cliente: 2, Nombre: Fermin
+        
+$I:36:24 PM : DEBUG [PersonaDAO.py] : 51 
+        ID Cliente: 3, Nombre: Gera
+        
+$I:36:24 PM : DEBUG [PersonaDAO.py] : 51 
+        ID Cliente: 4, Nombre: Orlando
+        
+$I:36:24 PM : DEBUG [PersonaDAO.py] : 51 
+        ID Cliente: 5, Nombre: Jorge
+        
+$I:36:24 PM : DEBUG [PersonaDAO.py] : 51 
+        ID Cliente: 7, Nombre: Rodrigo
+        
+$I:46:35 PM : DEBUG [CursorPoll.py] : 11 Inicio de bloque with
+$I:46:35 PM : DEBUG [Conexion2.py] : 40 Conexion Realizada <connection object at 0x000001A86E72D030; dsn: 'user=postgres password=xxx dbname=postgres host=127.0.0.1 port=5432', closed: 0>
+$I:46:35 PM : DEBUG [CursorPoll.py] : 17 Se ejecuta exit
+$I:46:35 PM : DEBUG [Conexion2.py] : 46 Conexion regresada <connection object at 0x000001A86E72D030; dsn: 'user=postgres password=xxx dbname=postgres host=127.0.0.1 port=5432', closed: 0>
+$I:47:06 PM : DEBUG [CursorPoll.py] : 11 Inicio de bloque with
+$I:47:06 PM : DEBUG [Conexion2.py] : 40 Conexion Realizada <connection object at 0x000001DD56EAD030; dsn: 'user=postgres password=xxx dbname=postgres host=127.0.0.1 port=5432', closed: 0>
+$I:47:06 PM : DEBUG [CursorPoll.py] : 17 Se ejecuta exit
+$I:47:06 PM : DEBUG [Conexion2.py] : 46 Conexion regresada <connection object at 0x000001DD56EAD030; dsn: 'user=postgres password=xxx dbname=postgres host=127.0.0.1 port=5432', closed: 0>
+$I:47:06 PM : DEBUG [PersonaDAO.py] : 59 <cursor object at 0x000001DD56F683C0; closed: -1>
+$I:47:25 PM : DEBUG [CursorPoll.py] : 11 Inicio de bloque with
+$I:47:25 PM : DEBUG [Conexion2.py] : 40 Conexion Realizada <connection object at 0x000002143883D030; dsn: 'user=postgres password=xxx dbname=postgres host=127.0.0.1 port=5432', closed: 0>
+$I:47:25 PM : DEBUG [CursorPoll.py] : 17 Se ejecuta exit
+$I:47:25 PM : DEBUG [Conexion2.py] : 46 Conexion regresada <connection object at 0x000002143883D030; dsn: 'user=postgres password=xxx dbname=postgres host=127.0.0.1 port=5432', closed: 0>
+$I:47:25 PM : DEBUG [PersonaDAO.py] : 59 <cursor object at 0x00000214388F83C0; closed: -1>
+$I:49:02 PM : DEBUG [CursorPoll.py] : 11 Inicio de bloque with
+$I:49:02 PM : DEBUG [Conexion2.py] : 40 Conexion Realizada <connection object at 0x0000022B131CD030; dsn: 'user=postgres password=xxx dbname=postgres host=127.0.0.1 port=5432', closed: 0>
+$I:49:02 PM : DEBUG [CursorPoll.py] : 17 Se ejecuta exit
+$I:49:02 PM : DEBUG [Conexion2.py] : 46 Conexion regresada <connection object at 0x0000022B131CD030; dsn: 'user=postgres password=xxx dbname=postgres host=127.0.0.1 port=5432', closed: 0>
+$I:49:02 PM : DEBUG [PersonaDAO.py] : 59 [(2, 'Fermin')]

@@ -14,7 +14,7 @@ try:
     conexion.autocommit = False
     cursor = conexion.cursor()
     sentencia = "INSERT INTO cliente(nombre) VALUES (%s)"
-    valores = ("Juan",)
+    valores = ("Gerar",)
     cursor.execute(sentencia, valores)
     conexion.commit()
     log.debug(f"{valores} insertado correctamente")

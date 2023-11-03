@@ -1,13 +1,14 @@
 # DAO = DATA ACCESS OUT
 from Persona import Cliente
-from Conexion2 import Conexion
-from CursorPoll import CursorDelPool
-from logger_base import log
+from Conexion2 import *
+from CursorPoll import *
+from logger_base import *
 
 
 class PersonaDAO:
     _SELECCIONAR = "SELECT * FROM cliente ORDER BY id"
-    _INSERTAR = "INSERT INTO cliente (id,nombre) VALUES (%s,%s)"
+    _SELECCIONAR_ID = "SELECT cliente.id, cliente.nombre FROM cliente where id = %s"
+    _INSERTAR = "INSERT INTO cliente (nombre) VALUES (%s)"
     _ACTUALIZAR = "UPDATE cliente set nombre = %s where id = %s"
     _BORRAR = "DELETE FROM cliente where id = %s"
 
@@ -22,16 +23,24 @@ class PersonaDAO:
             return personas
 
     @classmethod
+    def seleccionar_por_id(cls, id_persona):
+        with CursorDelPool() as cursor:
+            valores = (id_persona,)
+            cursor.execute(cls._SELECCIONAR_ID, valores)
+            resultado = cursor.fetchall()  # Obtener el resultado de la consulta
+            return resultado
+
+    @classmethod
     def insertar(cls, persona):
         with CursorDelPool() as cursor:
-            valores = (persona.id, persona.nombre)
+            valores = (persona.nombre,)
             cursor.execute(cls._INSERTAR, valores)
             return cursor.rowcount
 
     @classmethod
-    def actualizar(cls, nombre, persona):
+    def actualizar(cls, persona):
         with CursorDelPool() as cursor:
-            valores = (nombre, persona.id)
+            valores = (persona.nombre, persona.id)
             cursor.execute(cls._ACTUALIZAR, valores)
             return persona
 
@@ -46,6 +55,5 @@ class PersonaDAO:
 
 
 if __name__ == "__main__":
-    persona2 = PersonaDAO.seleccionar()
-    for p in persona2:
-        log.debug(p)
+    id = "2"
+    log.debug(f"{PersonaDAO.seleccionar_por_id(id)}")
