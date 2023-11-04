@@ -115,3 +115,8 @@ $I:49:02 PM : DEBUG [Conexion2.py] : 40 Conexion Realizada <connection object at
 $I:49:02 PM : DEBUG [CursorPoll.py] : 17 Se ejecuta exit
 $I:49:02 PM : DEBUG [Conexion2.py] : 46 Conexion regresada <connection object at 0x0000022B131CD030; dsn: 'user=postgres password=xxx dbname=postgres host=127.0.0.1 port=5432', closed: 0>
 $I:49:02 PM : DEBUG [PersonaDAO.py] : 59 [(2, 'Fermin')]
+04:13:45 PM : DEBUG [CursorPoll.py] : 11 Inicio de bloque with
+04:13:46 PM : DEBUG [Conexion2.py] : 40 Conexion Realizada <connection object at 0x000001C52100D030; dsn: 'user=postgres password=xxx dbname=postgres host=127.0.0.1 port=5432', closed: 0>
+04:13:46 PM : DEBUG [CursorPoll.py] : 17 Se ejecuta exit
+04:13:46 PM : DEBUG [Conexion2.py] : 46 Conexion regresada <connection object at 0x000001C52100D030; dsn: 'user=postgres password=xxx dbname=postgres host=127.0.0.1 port=5432', closed: 0>
+04:13:46 PM : DEBUG [PersonaDAO.py] : 59 [(2, 'Fermin')]
