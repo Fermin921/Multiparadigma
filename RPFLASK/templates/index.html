@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Inicio</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-4">
+        <div class="row mb-3">
+            <div class="col-md-6">
+                    <div class="card">
+                        <i class="material-icons md-48 text-center mt-3">person</i>
+                        <div class="card-body">           
+                            <h5 class="card-title text-center ">Autores</h5>
+                            <p class="card-text text-center ">Agregar o Editar Autores</p>
+                            <a href="{{ url_for('appautor.agregar') }}" class="btn btn-primary btn-block">Agregar Autor</a>                           
+                        </div>
+                    </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <i class="material-icons md-48 text-center mt-3">book</i>
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Libros</h5>
+                        <p class="card-text text-center ">Agregar libros</p>
+                        <a href="{{url_for('applibro.agregar')}}" class="btn btn-primary btn-block">Agregar libro</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <div class="card align-items-center">
+                    <i class="material-icons md-48 text-center mt-3">account_circle</i>
+                    <div class="card-body">           
+                        <h5 class="card-title text-center">Usuarios</h5>
+                        <p class="card-text text-center">Agregar usuario</p>
+                        <a href="{{ url_for('appusuario.agregar') }}" class="btn btn-primary btn-block">Agregar usuario</a>                           
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="container mt-4">
+            <h1>Listado de Préstamos</h1>
+            <div class="d-flex justify-content-between mb-3">
+                <a href="{{ url_for('appprestamo.agregar') }}" class="btn btn-primary">Agregar Préstamo</a>
+                <div>
+                    <!-- Botón Editar -->
+                    <button type="button" class="btn btn-success" id="editar-btn" disabled>
+                        <i class="material-icons">edit</i> Editar Préstamo
+                    </button>
+        
+                    <!-- Botón Eliminar -->
+                    <button type="button" class="btn btn-danger" id="eliminar-btn" disabled>
+                        <i class="material-icons">delete</i> Eliminar Préstamo
+                    </button>
+                </div>
+            </div>
+        
+            <form>
+                <div class="row">
+                    {% for prestamo in prestamos %}
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Prestamo {{ prestamo.id }}</h5>
+                                    <p class="card-text">Libro: {{ prestamo.libro.titulo }}</p>
+                                    <p class="card-text">Usuario: {{ prestamo.usuario.nombre }}</p>
+                                    <p class="card-text">Fecha Préstamo: {{ prestamo.fecha_prestamo }}</p>
+                                    <p class="card-text">Fecha Devolución: {{ prestamo.fecha_devolucion or 'No Devuelto' }}</p>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="prestamo_id" value="{{ prestamo.id }}" onclick="handleCheckboxClick()">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </form>
+        </div>
+        
+        <!-- Script de JavaScript para habilitar/deshabilitar botones -->
+        <script>
+            function handleCheckboxClick() {
+                var checkboxes = document.getElementsByName("prestamo_id");
+                var editarBtn = document.getElementById("editar-btn");
+                var eliminarBtn = document.getElementById("eliminar-btn");
+        
+                // Inicializar contadores de checkboxes seleccionados
+                var checkedCount = 0;
+        
+                for (var i = 0; i < checkboxes.length; i++) {
+                    if (checkboxes[i].checked) {
+                        checkedCount++;
+                    }
+                }
+        
+                // Habilitar/deshabilitar botones basado en la cantidad de checkboxes seleccionados
+                if (checkedCount === 1) {
+                    editarBtn.disabled = false;
+                    eliminarBtn.disabled = false;
+                } else {
+                    editarBtn.disabled = true;
+                    eliminarBtn.disabled = true;
+                }
+            }
+        </script>
+        
+        
+
+        <!-- Agregar tarjetas para los otros modelos (autores, libros, usuarios) aquí -->
+        <!-- Ejemplo para Autores -->
+        <h2>Listado de Autores</h2>
+        <div class="row">
+            {% for autor in autores %}
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ autor.nombre }} {{ autor.apellidos }}</h5>
+                            <p class="card-text">Edad: {{ autor.edad }}</p>
+                            <p class="card-text">Pais: {{ autor.pais }}</p>
+                            <p class="card-text">Descripción: {{ autor.descripcion }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+
+        <!-- Repite el mismo patrón para los otros modelos -->
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

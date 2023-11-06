@@ -1,0 +1,898 @@
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 16:46:53] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 16:46:53] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 16:48:19] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 16:48:25] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 16:48:28] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 16:51:01] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 16:53:27] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 16:53:55] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 16:56:05] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 16:58:01] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 17:01:53] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 17:02:09] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 17:02:12] "GET / HTTP/1.1" 200 -
+ERROR:app:Exception on /agregar [GET]
+Traceback (most recent call last):
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\routes\Autor\autor.py", line 26, in agregar
+    return render_template("agregar.html", forma=autorForm)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\templating.py", line 151, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\jinja2\environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\jinja2\environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\jinja2\environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: agregar.html
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 17:02:13] "[35m[1mGET /agregar HTTP/1.1[0m" 500 -
+ERROR:app:Exception on /agregar [GET]
+Traceback (most recent call last):
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\routes\Autor\autor.py", line 26, in agregar
+    return render_template("agregar.html", forma=autorForm)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\templating.py", line 151, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\jinja2\environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\jinja2\environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\jinja2\environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: agregar.html
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 17:02:19] "[35m[1mGET /agregar HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:app:Exception on /agregar [GET]
+Traceback (most recent call last):
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\routes\Autor\autor.py", line 26, in agregar
+    return render_template("autor/agregar.html", forma=autorForm)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\templating.py", line 152, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\templating.py", line 133, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\templates\autor\agregar.html", line 21, in top-level template code
+    {{ forma.apellidos.label }}<br>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\jinja2\environment.py", line 485, in getattr
+    return getattr(obj, attribute)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.UndefinedError: 'form.AutorForm object' has no attribute 'apellidos'
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 17:04:47] "[35m[1mGET /agregar HTTP/1.1[0m" 500 -
+ERROR:app:Exception on /agregar [GET]
+Traceback (most recent call last):
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\routes\Autor\autor.py", line 26, in agregar
+    return render_template("autor/agregar.html", forma=autorForm)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\templating.py", line 152, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\templating.py", line 133, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\templates\autor\agregar.html", line 21, in top-level template code
+    {{ forma.apellidos.label }}<br>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\jinja2\environment.py", line 485, in getattr
+    return getattr(obj, attribute)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.UndefinedError: 'form.AutorForm object' has no attribute 'apellidos'
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 17:08:17] "[35m[1mGET /agregar HTTP/1.1[0m" 500 -
+ERROR:app:Exception on /agregar [GET]
+Traceback (most recent call last):
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\routes\Autor\autor.py", line 26, in agregar
+    return render_template("autor/agregar.html", forma=autorForm)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\templating.py", line 152, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\templating.py", line 133, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\templates\autor\agregar.html", line 21, in top-level template code
+    <div class="form-group">
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\jinja2\environment.py", line 485, in getattr
+    return getattr(obj, attribute)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.UndefinedError: 'form.AutorForm object' has no attribute 'apellidos'
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 17:09:13] "[35m[1mGET /agregar HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 17:09:23] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 17:09:24] "GET /agregar HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 17:17:38] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 17:17:38] "GET /agregar HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 17:17:48] "GET /agregar HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:app:Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\routes\Autor\autor.py", line 13, in inicio
+    return render_template("index.html", autores=autores)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\templating.py", line 152, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\templating.py", line 133, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\templates\index.html", line 29, in top-level template code
+    <a href="{{ url_for('applibro.agregar') }}" class="btn btn-primary">Agregar Libro</a>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\app.py", line 1071, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\app.py", line 1060, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\werkzeug\routing\map.py", line 919, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'applibro.agregar'. Did you mean 'appautor.agregar' instead?
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 17:22:57] "[35m[1mGET / HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:app:Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\routes\Autor\autor.py", line 13, in inicio
+    return render_template("index.html", autores=autores)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\templating.py", line 152, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\templating.py", line 133, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\templates\index.html", line 29, in top-level template code
+    <a href="{{ url_for('applibro.agregar') }}" class="btn btn-primary">Agregar Libro</a>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\app.py", line 1071, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\app.py", line 1060, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\werkzeug\routing\map.py", line 919, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'applibro.agregar'. Did you mean 'appautor.agregar' instead?
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 17:30:48] "[35m[1mGET / HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:app:Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\routes\Autor\autor.py", line 13, in inicio
+    return render_template("index.html", autores=autores)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\templating.py", line 152, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\templating.py", line 133, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\templates\index.html", line 29, in top-level template code
+    <a href="{{ url_for('applibro.agregar') }}" class="btn btn-primary">Agregar Libro</a>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\app.py", line 1071, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\app.py", line 1060, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\werkzeug\routing\map.py", line 919, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'applibro.agregar'. Did you mean 'appautor.agregar' instead?
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 17:31:03] "[35m[1mGET / HTTP/1.1[0m" 500 -
+ERROR:app:Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\routes\Autor\autor.py", line 13, in inicio
+    return render_template("index.html", autores=autores)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\templating.py", line 152, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\templating.py", line 133, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\templates\index.html", line 29, in top-level template code
+    <a href="{{ url_for('applibro.agregar') }}" class="btn btn-primary">Agregar Libro</a>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\app.py", line 1071, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\app.py", line 1060, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\werkzeug\routing\map.py", line 919, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'applibro.agregar'. Did you mean 'appautor.agregar' instead?
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 17:31:07] "[35m[1mGET / HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:app:Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\routes\Autor\autor.py", line 13, in inicio
+    return render_template("index.html", autores=autores)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\templating.py", line 152, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\templating.py", line 133, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\templates\index.html", line 29, in top-level template code
+    <a href="{{ url_for('applibro.agregar') }}" class="btn btn-primary">Agregar Libro</a>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\app.py", line 1071, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\app.py", line 1060, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\werkzeug\routing\map.py", line 919, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'applibro.agregar'. Did you mean 'appautor.agregar' instead?
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 17:31:53] "[35m[1mGET / HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:app:Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\routes\Autor\autor.py", line 13, in inicio
+    return render_template("index.html", autores=autores)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\templating.py", line 152, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\templating.py", line 133, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\templates\index.html", line 29, in top-level template code
+    <a href="{{ url_for('applibro.agregar') }}" class="btn btn-primary">Agregar Libro</a>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\app.py", line 1071, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\app.py", line 1060, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\werkzeug\routing\map.py", line 919, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'applibro.agregar'. Did you mean 'appautor.agregar' instead?
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 17:34:30] "[35m[1mGET / HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 17:38:07] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 17:38:14] "GET /agregar HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 17:38:16] "GET /agregar HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 17:38:20] "GET /agregar HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 17:38:22] "GET /agregar HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 17:38:24] "GET /agregar HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 17:39:13] "GET /agregar HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 17:39:16] "GET /agregar HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 17:39:29] "GET /agregar HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 17:42:42] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 17:42:43] "GET /agregarlibro HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 17:42:44] "GET /agregarautor HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 17:42:51] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 17:43:04] "GET /agregarautor HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 17:43:08] "GET /agregarlibro HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 17:43:11] "GET /agregarautor HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 17:45:38] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 17:45:40] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 17:45:41] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 17:45:41] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 17:45:43] "GET /agregarautor HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 17:47:02] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 17:47:03] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 17:47:04] "GET /agregarlibro HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:app:Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\routes\Autor\autor.py", line 13, in inicio
+    return render_template("index.html", autores=autores)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\templating.py", line 151, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\jinja2\environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\jinja2\environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\jinja2\environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\jinja2\loaders.py", line 138, in load
+    code = environment.compile(source, name, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\jinja2\environment.py", line 768, in compile
+    self.handle_exception(source=source_hint)
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\templates\index.html", line 31, in template
+    <a href="{{url for('applibro.agregar')}}" class="btn btn-primary btn-block">Agregar autor</a>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.TemplateSyntaxError: expected token 'end of print statement', got 'for'
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 17:49:31] "[35m[1mGET / HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 17:50:23] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 17:50:27] "GET /agregarlibro HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 17:50:30] "GET /agregarlibro HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 17:50:37] "GET /agregarautor HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 17:50:40] "GET /agregarlibro HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 17:53:00] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 17:53:12] "GET /agregarautor HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 17:54:46] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 17:55:15] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 17:56:03] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 17:57:05] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 17:57:11] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 17:57:15] "GET /agregarautor HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 17:57:17] "GET /agregarlibro HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 17:57:32] "GET /agregarautor HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 17:57:38] "GET /agregarlibro HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 18:00:10] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 18:00:13] "GET /agregarautor HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:app:Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\routes\Autor\autor.py", line 13, in inicio
+    return render_template("index.html", autores=autores)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\templating.py", line 152, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\templating.py", line 133, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\templates\index.html", line 53, in top-level template code
+    <button type="button" class="btn btn-success" id="editar-btn" disabled href="{{url_for('appprestamo.editar')}}">
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\app.py", line 1071, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\app.py", line 1060, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\werkzeug\routing\map.py", line 919, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'appprestamo.editar'. Did you forget to specify values ['id']?
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 18:14:28] "[35m[1mGET / HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:app:Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\routes\Autor\autor.py", line 13, in inicio
+    return render_template("index.html", autores=autores)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\templating.py", line 152, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\templating.py", line 133, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\templates\index.html", line 53, in top-level template code
+    <button type="button" class="btn btn-success" id="editar-btn" disabled href="{{url_for('appprestamo.editar')}}">
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\app.py", line 1071, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\app.py", line 1060, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\werkzeug\routing\map.py", line 919, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'appprestamo.editar'. Did you forget to specify values ['id']?
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 18:17:39] "[35m[1mGET / HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:app:Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\routes\Autor\autor.py", line 13, in inicio
+    return render_template("index.html", autores=autores)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\templating.py", line 152, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\templating.py", line 133, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\templates\index.html", line 53, in top-level template code
+    <button type="button" class="btn btn-success" id="editar-btn" disabled href="{{url_for('appprestamo.editar',id=prestamo.id)}}">
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\jinja2\environment.py", line 485, in getattr
+    return getattr(obj, attribute)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.UndefinedError: 'prestamo' is undefined
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 18:18:20] "[35m[1mGET / HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:app:Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\routes\Autor\autor.py", line 15, in inicio
+    return render_template("index.html", autores=autores, prestamos=prestamos)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\templating.py", line 152, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\templating.py", line 133, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\templates\index.html", line 53, in top-level template code
+    <button type="button" class="btn btn-success" id="editar-btn" disabled href="{{url_for('appprestamo.editar',id=prestamo.id)}}">
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\jinja2\environment.py", line 485, in getattr
+    return getattr(obj, attribute)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.UndefinedError: 'prestamo' is undefined
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 18:23:33] "[35m[1mGET / HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:app:Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\routes\Autor\autor.py", line 15, in inicio
+    return render_template("index.html", autores=autores, prestamo=prestamos)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\templating.py", line 152, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\templating.py", line 133, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\templates\index.html", line 53, in top-level template code
+    <button type="button" class="btn btn-success" id="editar-btn" disabled href="{{url_for('appprestamo.editar',id=prestamo.id)}}">
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\app.py", line 1060, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\werkzeug\routing\map.py", line 917, in build
+    rv = self._partial_build(endpoint, values, method, append_unknown)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\werkzeug\routing\map.py", line 796, in _partial_build
+    rv = self._partial_build(
+         ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\werkzeug\routing\map.py", line 809, in _partial_build
+    build_rv = rule.build(values, append_unknown)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\werkzeug\routing\rules.py", line 831, in build
+    return self._build_unknown(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<werkzeug routing>", line 1, in <builder:'/editarprestamo/<int:id>'>
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\werkzeug\routing\converters.py", line 163, in to_url
+    value = str(self.num_convert(value))
+                ^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.UndefinedError: 'list object' has no attribute 'id'
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 18:24:29] "[35m[1mGET / HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 18:28:01] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 18:28:08] "GET /agregarusuario HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 18:28:11] "GET /agregarusuario HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 18:28:13] "GET /agregarusuario HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 18:28:15] "GET /agregarlibro HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 18:28:17] "GET /agregarautor HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 18:28:18] "GET /agregarprestamo HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 18:31:12] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 18:31:16] "GET /agregarusuario HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 18:31:19] "GET /agregarlibro HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 18:31:21] "GET /agregarprestamo HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 18:31:35] "GET /agregarlibro HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 18:31:36] "GET /agregarautor HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 18:31:38] "GET /agregarprestamo HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 18:34:26] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 18:34:26] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 18:34:53] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 18:35:52] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 18:35:53] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 18:36:08] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 18:36:09] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 18:36:09] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 18:36:10] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 18:36:10] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 18:36:13] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 18:37:14] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 18:37:14] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 18:37:15] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 18:37:15] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 18:37:23] "GET /agregarautor HTTP/1.1" 200 -
+ERROR:app:Exception on /agregarautor [POST]
+Traceback (most recent call last):
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\wtforms\validators.py", line 401, in __call__
+    import email_validator
+ModuleNotFoundError: No module named 'email_validator'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\routes\Autor\autor.py", line 23, in agregar
+    if autorForm.validate_on_submit():
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\flask_wtf\form.py", line 86, in validate_on_submit
+    return self.is_submitted() and self.validate(extra_validators=extra_validators)
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\wtforms\form.py", line 329, in validate
+    return super().validate(extra)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\wtforms\form.py", line 146, in validate
+    if not field.validate(self, extra):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\wtforms\fields\core.py", line 246, in validate
+    stop_validation = self._run_validation_chain(form, chain)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\wtforms\fields\core.py", line 266, in _run_validation_chain
+    validator(form, self)
+  File "C:\Users\fer_m\OneDrive\Escritorio\TEC\Multiparadigma\Multiparadigma-Materia\Multiparadigma\RPFLASK\.venv\Lib\site-packages\wtforms\validators.py", line 403, in __call__
+    raise Exception(
+Exception: Install 'email_validator' for email validation support.
+INFO:werkzeug:127.0.0.1 - - [05/Nov/2023 18:37:53] "[35m[1mPOST /agregarautor HTTP/1.1[0m" 500 -

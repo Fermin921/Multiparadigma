@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-4">
+        <h1>Listado de Autores</h1>
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <span>FLASK</span>
+            <a href="{{url_for('appautor.agregar')}}" class="btn btn-primary">Agregar Autor</a>
+        </div>
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Apellidos</th>
+                        <th>Edad</th>
+                        <th>Pais</th>
+                        <th>Descripcion</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for autor in autores %}
+                        <tr>
+                            <td>{{ autor.id }}</td>
+                            <td>{{ autor.nombre }}</td>
+                            <td>{{ autor.apellidos }}</td>
+                            <td>{{ autor.edad }}</td>
+                            <td>{{ autor.pais }}</td>
+                            <td>{{ autor.descripcion }}</td>
+                            <td>
+                                <a href="{{ url_for('appautor.editar', id=autor.id) }}" class="btn btn-sm btn-warning"><i class="material-icons">edit</i></a>
+                                <a href="{{ url_for('appautor.eliminar', id=autor.id) }}" class="btn btn-sm btn-danger"><i class="material-icons">delete</i></a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
