@@ -8,7 +8,7 @@
 <body>
     <h1>Login</h1>
 
-    <form action="" id="login-form">
+    <form id="login-form">
         <label for="email">Email</label>
         <input type="text" id="email" name="email" placeholder="Enter your email">
         <br>
@@ -36,7 +36,8 @@
                 })
             }).then(response => response.json())
             .then(data=>{
-                window.locatio.href='/login'
+                localStorage.setItem('token',data.auth_token);
+                console.log(data);
             })
         })
     </script>

@@ -5,6 +5,7 @@ from encriptador import bcrypt
 from flask_migrate import Migrate
 from config import BaseConfig
 from routes.user import appuser
+from routes.imagenes.imagen import imagesUser
 
 
 app = Flask(__name__)
