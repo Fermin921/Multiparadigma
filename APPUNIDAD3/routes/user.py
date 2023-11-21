@@ -96,7 +96,7 @@ def login_post():
                     "info": info,
                 }
                 return jsonify(responseObject)
-        return render_template("/login.html")
+        return render_template("/main.html")
     else:
         email = request.json["email"]
         password = request.json["password"]
