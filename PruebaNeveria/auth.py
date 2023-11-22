@@ -3,9 +3,10 @@ from functools import wraps
 from flask import jsonify, request
 
 
-def obtenerInfo(tokens):
-    if tokens:
-        resp = User.decode_auth_token(tokens)
+def obtenerInfo(token):
+    if token:
+        resp = User.decode_auth_token(token)
+        print(resp)
         user = User.query.filter_by(id=resp["sub"]).first()
         if user:
             usuario = {
@@ -19,7 +20,7 @@ def obtenerInfo(tokens):
             }
             return usuario
         else:
-            error = {"status": "fail", "message": resp}
+            error = {"status": "fail", "message": "Usuario no encontrado"}
             return error
 
 
@@ -27,33 +28,42 @@ def tokenCheck(f):
     @wraps(f)
     def verificar(*args, **kwargs):
         token = None
-        print(request.headers["token"])
         if "token" in request.headers:
-            print("Que rollo si entre al primero")
             token = request.headers["token"]
         if not token:
-            return jsonify({"token": "Token no valido"})
+            return jsonify({"message": "Token no encontrado"})
         try:
             info = obtenerInfo(token)
             print(info)
             if info["status"] == "fail":
-                return jsonify({"message": "Token failed"})
+                return jsonify({"message": info["message"]})
         except Exception as e:
             print(e)
-            return jsonify({"message": "Token invalid"})
-        return f(info["data"], *args, **kwargs)
+            return jsonify({"message": "Error"})
+        return f(info.get("data"), *args, **kwargs)
 
     return verificar
 
 
 def verificar(token):
     if not token:
-        return jsonify({"token": "Token no valido"})
+        return {"status": "fail", "message": "Token no encontrado"}
     try:
         info = obtenerInfo(token)
-        if info["status"] == "fail":
-            return jsonify({"message": "Token failed"})
+        return info
     except Exception as e:
         print(e)
-        return jsonify({"message": "Token invalid"})
-    return info
+        return {"status": "fail", "message": "Error"}
+
+
+# def verificar(token):
+#     if not token:
+#         return jsonify({"token": "Token no valido"})
+#     try:
+#         info = obtenerInfo(token)
+#         if info["status"] == "fail":
+#             return jsonify({"message": "Token failed"})
+#     except Exception as e:
+#         print(f"Error al verificar el token: {e}")
+#         return jsonify({"message": "Token invalid"})
+#     return info

@@ -3,44 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Registro</title>
 </head>
 <body>
-    <h1>Login</h1>
+    <h1>Registro</h1>
 
-    <form id="login-form">
+    <form id="registro-form">
         <label for="email">Email</label>
         <input type="text" id="email" name="email" placeholder="Enter your email">
         <br>
         <label for="password">Password</label>
         <input type="password" id="password" name="password" placeholder="Enter your password">
         <br>
-        <button type="submit" id="login-btn">Submit</button>
+        <button type="submit" value="Register" id="registro-btn">Submit</button>
     </form>
 
     <script>
-        const loginForm = document.querySelector('#login-form');
-        const loginButton = document.querySelector('#login-btn');
-        loginButton.addEventListener('click', (e) => {
+        const registroForm = document.querySelector('#registro-form');
+        const registroButton = document.querySelector('#registro-btn');
+        registroButton.addEventListener('click',(e)=>{
             e.preventDefault();
-            const email = document.querySelector('#email').value
+            const email = document.querySelector('#email').value;
             const password = document.querySelector('#password').value;
-            fetch('/alta_sucursal', {
+
+            fetch('/registro', {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json',
-                    'token': localStorage.getItem('token') // Asegúrate de incluir el token en la solicitud
+                    'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
-                    'nombre': nombre,
-                    'direccion': direccion
+                    'email': email,
+                    'password': password
                 })
             }).then(response => response.json())
             .then(data => {
-                console.log(data);
-                // Puedes manejar la respuesta según tus necesidades
+                    console.log(data);
+                    window.location.href = "/login"
             })
-        })
+            .catch(error => {
+                console.error('Error en la solicitud. Por favor, inténtalo de nuevo.', error);
+            });
+        });
     </script>
 </body>
 </html>

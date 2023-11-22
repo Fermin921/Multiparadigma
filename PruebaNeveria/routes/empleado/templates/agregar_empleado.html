@@ -1,0 +1,75 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <h1>Register new user</h1>
+    <form id="sign-form">
+        <label for="clave">Clave</label>
+        <input type="text" id="clave" name="clave" placeholder="Enter clave">
+        <br>
+        <label for="rfc">RFC</label>
+        <input type="text" id="rfc" name="rfc" placeholder="Enter RFC">
+        <br>
+        <label for="nombres">Nombres</label>
+        <input type="text" id="nombres" name="nombres" placeholder="Enter nombres">
+        <br>
+        <label for="apellidos">Apellidos</label>
+        <input type="text" id="apellidos" name="apellidos" placeholder="Enter apellidos">
+        <br>
+        <label for="fecha_nacimiento">Fecha de Nacimiento</label>
+        <input type="date" id="fecha_nacimiento" name="fecha_nacimiento">
+        <br>
+        <label for="sueldo">Sueldo</label>
+        <input type="number" id="sueldo" name="sueldo" placeholder="Enter sueldo">
+        <br>
+        <label for="area_laboral">Area Laboral</label>
+        <input type="text" id="area_laboral" name="area_laboral" placeholder="Enter area laboral">
+        <br>
+        <label for="sucursal">Sucursal</label>
+        <input type="number" id="sucursal" name="sucursal" placeholder="Enter sucursal ID o nombre">
+        <br>
+        <button type="submit" value="Register" id="sign-btn">Submit</button>
+    </form>
+    <script>
+        const signForm = document.querySelector('#sign-form');
+        console.log(localStorage.getItem("token"));
+        const signButton = document.querySelector('#sign-btn');
+        signButton.addEventListener('click',(e)=>{
+            e.preventDefault();
+            const clave = document.querySelector('#clave').value;
+            const rfc = document.querySelector('#rfc').value;
+            const nombres = document.querySelector('#nombres').value;
+            const apellidos = document.querySelector('#apellidos').value;
+            const fecha_nacimiento = document.querySelector('#fecha_nacimiento').value;
+            const sueldo = document.querySelector('#sueldo').value;
+            const area_laboral = document.querySelector('#area_laboral').value;
+            const sucursal = document.querySelector('#sucursal').value;
+            fetch('/altaempleado', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'token': localStorage.getItem("token")
+                },
+                body: JSON.stringify({
+                    'clave': clave,
+                    'rfc': rfc,
+                    'nombres': nombres,
+                    'apellidos': apellidos,
+                    'fecha_nacimiento': fecha_nacimiento,
+                    'sueldo': sueldo,
+                    'area_laboral': area_laboral,
+                    'sucursal': sucursal,
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === 'success') {
+                    // Redirigir a la página de login si el registro es exitoso
+                    window.location.href = '/main';
+                } else {
+                    // Manejar errores o mostrar mensajes al usuario si es necesario
+                    console.error(data.message);
+                }
+            })
+        })
+    </script>
+{% endblock %}

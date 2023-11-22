@@ -55,7 +55,7 @@ class Sucursal(db.Model):
 # Modelo Telefono
 class Telefono(db.Model):
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
-    no_tel = telefono = db.Column(db.String(10), nullable=False)
+    no_tel = db.Column(db.String(10), nullable=False)
     # Referencia a un telefono tiene una sucursal
     sucursal_id = db.Column(db.Integer, db.ForeignKey("sucursal.id"), nullable=False)
 
@@ -89,12 +89,10 @@ class Empleado(db.Model):
     edad = db.Column(db.Integer, nullable=False)
     sueldo = db.Column(db.Float, nullable=False)
     area_laboral = db.Column(db.String(50), nullable=False)
-    # Relación uno a uno con Usuario
-    usuario = db.relationship("User", back_populates="empleado")
     # Referencia de que un empleado tiene una sucursal
     sucursal_id = db.Column(db.Integer, db.ForeignKey("sucursal.id"), nullable=False)
     # Relacion empleado tiene muchas ventas
-    venta = db.relationship("Venta", backref="sucursal", lazy=True)
+    venta = db.relationship("Venta", backref="empleado", lazy=True)
 
 
 # Modelo proveedor
@@ -128,14 +126,16 @@ class Venta(db.Model):
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     fecha_venta = db.Column(db.DateTime, nullable=False)
     monto_total = db.Column(db.Float, nullable=False)
-    # Clave foránea para establecer la relación con Sucursal
     sucursal_id = db.Column(db.Integer, db.ForeignKey("sucursal.id"), nullable=False)
-    # Clave foránea para establecer la relación con Empleado
     empleado_clave = db.Column(
         db.String, db.ForeignKey("empleado.clave"), nullable=False
     )
-    # Relacion venta tiene muchos productos vendidos
-    producto = db.relationship("Producto", backref="venta", lazy=True)
+    producto = db.relationship(
+        "Productosvendidos",
+        backref="venta",
+        lazy=True,
+        primaryjoin="Venta.id == Productosvendidos.venta_id",
+    )
 
 
 # Modelo Productosvendidos
@@ -154,8 +154,6 @@ class User(db.Model):  # Modelo de las clase usuario
     password = db.Column(db.String(255), nullable=False)
     registered_on = db.Column(db.DateTime, nullable=False)
     admin = db.Column(db.Boolean, nullable=False, default=False)
-    # Relación uno a uno con Empleado
-    empleado = db.relationship("Empleado", back_populates="user", uselist=False)
 
     def __init__(self, email, password, admin=False) -> None:
         self.email = email
@@ -171,7 +169,7 @@ class User(db.Model):  # Modelo de las clase usuario
             payload = {
                 "exp": datetime.datetime.utcnow()
                 + datetime.timedelta(
-                    minutes=10
+                    minutes=5
                 ),  # Sirve para especificar la cantidad de tiempo que servira el token
                 "iat": datetime.datetime.utcnow(),
                 "sub": user_id,
@@ -188,9 +186,11 @@ class User(db.Model):  # Modelo de las clase usuario
             payload = jwt.decode(
                 auth_token, BaseConfig.SECRET_KEY, algorithms=["HS256"]
             )
+            # Verificar la expiración del token
+            if "exp" in payload and payload["exp"] < datetime.datetime.utcnow():
+                return "Token Expired, please log in again"
             return payload
         except jwt.ExpiredSignatureError as e:
             return "Signature Expired Prelase log in again"
-
         except jwt.InvalidTokenError as e:
             return "Invalid Token"
